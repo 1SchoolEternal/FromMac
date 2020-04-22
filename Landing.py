@@ -2,7 +2,7 @@
 import sys
 import math
 # THE FOLLOWING IS MY LABARYTH CODE
-
+#
 
 bfs = 0
 
