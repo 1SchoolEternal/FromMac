@@ -1,8 +1,3 @@
-# I will duplicate the input
-# of a puzzle I was trying to
-# solve on Codingames.
-# I did get it to work, but in
-# a combersome fashion
 
 import sys
 import math
@@ -14,22 +9,22 @@ bfs = 0
 
 def up_down(character_set, kr, kc):
     dv = 'U' if r/2 >= kr else 'D'
-        if dv == 'U':
-            node_row = character_set[0]
-            if '?' in node_row[kc]:
-                node_row = character_set[kr - 1]
-                if node_row[kc] == '.':
-                    print('U')
-                else:
-                    find_question()
-        elif dv == 'D':
-            node_row = character_set[r]
-            if '?' in node_row[kc]:
-                node_row = character_set[kr + 1]
-                if node_row[kc] == '.':
-                    print('D')
-                else:
-                    find_question()
+    if dv == 'U':
+        node_row = character_set[0]
+        if '?' in node_row[kc]:
+            node_row = character_set[kr - 1]
+            if node_row[kc] == '.':
+                print('U')
+            else:
+                find_question()
+    elif dv == 'D':
+        node_row = character_set[r]
+        if '?' in node_row[kc]:
+            node_row = character_set[kr + 1]
+            if node_row[kc] == '.':
+                print('D')
+            else:
+                find_question()
 
 
 def find_question(character_set):
